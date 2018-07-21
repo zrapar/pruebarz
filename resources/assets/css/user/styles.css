@@ -2,3 +2,10 @@
 	width: 190px;
 	color: #fff;
 }
+.fix_view_ques {
+	margin-top: 20%;
+	margin-left: -15%;
+}
+.list-unstyled .components > li > a {
+	color: #fff;
+}

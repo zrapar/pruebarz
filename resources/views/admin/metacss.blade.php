@@ -1,4 +1,4 @@
 <!-- Styles -->
-<link href="css/user.css" rel="stylesheet">
-<link href="css/admin.css" rel="stylesheet">
-<link href="css/app.css" rel="stylesheet">
+{{ Html::style('css/user.css') }}
+{{ Html::style('css/admin.css') }}
+{{ Html::style('css/app.css') }}

@@ -32909,6 +32909,7 @@ __webpack_require__(15)();
 __webpack_require__(43)();
 __webpack_require__(45)();
 __webpack_require__(47)();
+var $ = __webpack_require__(0);
 window.dt = __webpack_require__(2)();
 window.buttons = __webpack_require__(6)();
 window.bhtml = __webpack_require__(14)();

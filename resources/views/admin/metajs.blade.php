@@ -1,2 +1,8 @@
-<script src="js/app.js"></script>
-<script src="js/admin.js"></script>
+{{ Html::script('js/app.js') }}
+{{ Html::script('js/admin.js') }}
+
+
+
+
+
+

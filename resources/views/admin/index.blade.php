@@ -8,7 +8,11 @@
 <div class="wrapper">
     @include('admin.sidebar')
     <div class="container">
+        @if(!$bad)
         @include('admin.dt')
+        @else
+        @include('admin.dt2')
+        @endif
     </div>
 </div>
 @endsection
