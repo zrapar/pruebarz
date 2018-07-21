@@ -1,3 +1,2 @@
-<script>
-    console.log('hola');
-</script>
+<script src="js/app.js"></script>
+<script src="js/admin.js"></script>

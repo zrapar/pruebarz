@@ -18,7 +18,7 @@ Route::group(['namespace' => 'User','as' => 'user'], function() {
 
 });
 
-Route::group(['namespace' => 'Admin','prefix'=>'admin','as' => 'admin'], function() {
+Route::group(['namespace' => 'Admin','prefix'=>'admin','as' => 'admin','middleware'=>'auth'], function() {
 
   require __DIR__ . '/admin/admin.php';
 

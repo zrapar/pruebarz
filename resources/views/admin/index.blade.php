@@ -1,13 +1,18 @@
 @extends('common.app')
 
 @section('meta-css')
-@include('user.metacss')
+@include('admin.metacss')
 @endsection
 
 @section('contenido')
-    @include('admin.hola')
+<div class="wrapper">
+    @include('admin.sidebar')
+    <div class="container">
+        @include('admin.dt')
+    </div>
+</div>
 @endsection
 
 @section('meta-js')
-@include('user.metajs')
+@include('admin.metajs')
 @endsection

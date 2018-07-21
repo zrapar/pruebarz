@@ -17,6 +17,7 @@ class CreateQuestionsTable extends Migration
             $table->increments('id');
             $table->string('question');
             $table->string('badword')->nullable();
+            $table->string('who_id')->references('id')->on('users');
             $table->unsignedInteger('status');
             $table->foreign('status')->references('id')->on('status');
             $table->timestamps();
