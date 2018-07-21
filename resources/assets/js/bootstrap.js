@@ -55,3 +55,9 @@ console.log(window.SITE_URL);
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+require( 'datatables.net-autofill-bs4' );
+require( 'datatables.net-buttons/js/buttons.html5.js' );
+require( 'datatables.net-buttons/js/buttons.print.js' );
+require( 'datatables.net-colreorder-bs4' );
+require( 'datatables.net-fixedcolumns-bs4' );
+require( 'datatables.net-responsive-bs4' );

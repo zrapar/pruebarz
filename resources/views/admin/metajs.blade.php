@@ -1,8 +1,2 @@
-{{ Html::script('js/app.js') }}
-{{ Html::script('js/admin.js') }}
-
-
-
-
-
-
+<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/admin.js') }}"></script>

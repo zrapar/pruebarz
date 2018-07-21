@@ -1673,7 +1673,6 @@ function sendQuestion(quest){
 		swal2({
 			title: 'Logueate',
 			html:'<form method="POST" id="swalLogin">'+
-			'<label class="alert alert-danger" id="errorMsg"></label>'+
 			'<div class="form-group row">'+
 			'<label for="email" class="col-sm-4 col-form-label text-md-right">Email</label>'+
 			'<div class="col-md-6">'+

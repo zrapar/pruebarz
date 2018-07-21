@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Question;
+use Illuminate\Http\Request;
 use App\Models\BadWords;
 use Yajra\Datatables\Datatables;
 use Illuminate\Support\Facades\DB;
@@ -33,10 +34,22 @@ class AdminController extends Controller {
         $malito = DB::table('bad_words')
             ->leftJoin('status', 'bad_words.status', '=', 'status.id')
             ->get();
-
-            
-        
         return Datatables::of($malito)->make(true);
+    }
+    public function addWord(Request $request){
+        $word= new BadWords;
+                $word->word= $rewordt->word;
+                
+                
+                $word->status=1;
+                $word->created_at=Carbon::now();
+                $word->updated_at=Carbon::now();
+                $word->save();
+                return response()->json([
+                    'status'=>'true',
+                    'message'=>'La palabra fue agregada correctamente'
+                    ]);
+        
     }
     
 }

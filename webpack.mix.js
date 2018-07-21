@@ -29,6 +29,7 @@ mix.js('resources/assets/js/app.js', 'public/js')
     'node_modules/datatables.net-bs4/css/dataTables.bootstrap4.min.css',
     ],'public/css/admin.css')
 .scripts([
+    
     'resources/assets/js/admin/script.js'
 ],'public/js/admin.js')
 .scripts([
