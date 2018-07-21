@@ -42,11 +42,19 @@ function sendQuestion(quest){
            if(response.status=='true'){
             swal2('Exito',
             response.message,
-            'success');
+            'success').then((result) => {
+							if (result.value) {
+								location.reload();
+							}
+						})
            }else if (response.status == 'false'){
             swal2('Oopps!...',
             response.message,
-            'error');
+            'error').then((result) => {
+							if (result.value) {
+								location.reload();
+							}
+						})
            }else{
             hola(quest);
            }

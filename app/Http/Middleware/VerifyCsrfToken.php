@@ -13,5 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         '/send_quota',
+        '/admin/badup',
     ];
 }

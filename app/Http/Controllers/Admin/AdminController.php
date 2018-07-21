@@ -37,8 +37,9 @@ class AdminController extends Controller {
         return Datatables::of($malito)->make(true);
     }
     public function addWord(Request $request){
+        
         $word= new BadWords;
-                $word->word= $rewordt->word;
+                $word->word= $request->word;
                 
                 
                 $word->status=1;

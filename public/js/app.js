@@ -31360,12 +31360,12 @@ console.log(window.SITE_URL);
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
-__webpack_require__(39)();
-__webpack_require__(41)();
-__webpack_require__(42)();
-__webpack_require__(43)();
-__webpack_require__(45)();
-__webpack_require__(47)();
+__webpack_require__(39);
+__webpack_require__(41);
+__webpack_require__(42);
+__webpack_require__(43);
+__webpack_require__(45);
+__webpack_require__(47);
 
 /***/ }),
 /* 17 */
