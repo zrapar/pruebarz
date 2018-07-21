@@ -9,19 +9,17 @@ use App\Models\Question;
 use Carbon\Carbon;
 
 class UserController extends Controller {
-    public function index(Request $request){
-        $status = $request->session()->get('status');
+    public function index(){
         
-        if($status == null){
-
+        
+        
             return view('user.index');
-        }else{
-            return view('user.index')
-                    ->with('status',$status);
-        }
+        
+            
     }
     public function question(Request $request)
-    {
+    {  
+        
         $badWords = BadWords::where([
             ['status', '=', 1]
             ])->orderBy('id', 'desc')->get();
@@ -42,10 +40,10 @@ class UserController extends Controller {
             $ques->created_at=Carbon::now();
             $ques->updated_at=Carbon::now();
             $ques->save();
-            
-            $request->session()->flash('status', false);
-            
-            return redirect('/');
+            return response()->json([
+                'status'=>'false',
+                'message'=>'La Pregunta no fue enviada por contener malas palabras'
+                ]);
         }else{
             $ques= new Question;
             $ques->question= $request->question;
@@ -54,8 +52,10 @@ class UserController extends Controller {
             $ques->created_at=Carbon::now();
             $ques->updated_at=Carbon::now();
             $ques->save();
-            $request->session()->flash('status', true);
-            return redirect('/');
+            return response()->json([
+                'status'=>'true',
+                'message'=>'La pregunta fue enviada, pronto recibira su respuesta'
+                ]);
         }
     }
 }
