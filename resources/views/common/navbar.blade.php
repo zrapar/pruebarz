@@ -48,6 +48,7 @@
                                     </form>
                                 </div>
                             </li>
+                            
                         @endguest
                     </ul>
                     <!-- <span class="navbar-text actions">
