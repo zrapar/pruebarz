@@ -32,8 +32,10 @@ class AdminController extends Controller {
     }
     public function getDataTableBad(){
         $malito = DB::table('bad_words')
-            ->leftJoin('status', 'bad_words.status', '=', 'status.id')
+            ->join('status', 'bad_words.status', '=', 'status.id')
+            ->select('bad_words.id','bad_words.word','bad_words.created_at','status.status')
             ->get();
+            
         return Datatables::of($malito)->make(true);
     }
     public function addWord(Request $request){
@@ -51,6 +53,23 @@ class AdminController extends Controller {
                     'message'=>'La palabra fue agregada correctamente'
                     ]);
         
+    }
+    public function editword(Request $request){
+        $word= BadWords::findOrFail($request->id);
+        $word->word=$request->word;
+        $word->save();
+        return response()->json([
+            'status'=>'true',
+            'message'=>'La palabra fue editada correctamente'
+            ]);
+    }
+    public function deleteword(Request $request){
+        $word= BadWords::findOrFail($request->id);
+        $word->delete();
+        return response()->json([
+            'status'=>'true',
+            'message'=>'La palabra fue eliminada correctamente'
+            ]);
     }
     
 }
